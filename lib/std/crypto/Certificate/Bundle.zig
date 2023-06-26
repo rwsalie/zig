@@ -50,7 +50,7 @@ pub fn deinit(cb: *Bundle, gpa: Allocator) void {
     cb.* = undefined;
 }
 
-pub const RescanError = RescanLinuxError || RescanMacError || RescanWindowsError;
+pub const RescanError = RescanLinuxError || RescanMacError || RescanWindowsError || RescanOpenBSDError;
 
 /// Clears the set of certificates and then scans the host operating system
 /// file system standard locations for certificates.
