@@ -5930,7 +5930,7 @@ pub const user_desc = switch (native_os) {
 pub const utsname = switch (native_os) {
     .linux => linux.utsname,
     .emscripten => emscripten.utsname,
-    .solaris, .illumos => extern struct {
+    .solaris, .illumos, openbsd => extern struct {
         sysname: [256:0]u8,
         nodename: [256:0]u8,
         release: [256:0]u8,
